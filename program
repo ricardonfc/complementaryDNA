@@ -1,0 +1,53 @@
+#include<stdio.h>
+
+main() {
+
+	int n, i;
+
+	printf("\n\nDigite o tamanho da sequencia:");
+
+	scanf("%d",&n);
+
+	char seq[n], com[n];
+
+	printf("\nDigite a sequencia:");
+
+	scanf("%s",&seq);
+
+	for(i;i<n;i++)
+
+	{
+
+		if(seq[i]=='A')
+
+		com[i]='T';
+
+		else if(seq[i]=='T')
+
+		com[i]='A';
+
+			else if(seq[i]=='G')
+
+			com[i]='C';
+
+			else if(seq[i]=='C')
+
+			com[i]='G';
+
+				else if(seq[i]==' ')
+
+				com[i]='_';
+
+				else if(seq[i]!='T' && seq[i]!='A' && seq[i]!='G' && seq[i]!='C')
+
+				com[i]='*';
+
+	}
+
+printf("\n\n%s\n\n",com);
+
+printf("\n\n* nao sao bases de DNA\n\n");
+
+return 0;
+
+}
